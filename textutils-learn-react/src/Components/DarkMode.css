@@ -1,0 +1,105 @@
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 10;
+}
+
+/* Capsule button styles */
+.btn {
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px; /* Capsule shape */
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Outline dark button (capsule with border) */
+.btn-outline-dark {
+    background-color: transparent; /* Default transparent background */
+    color: #333; /* Light mode color */
+    border: 2px solid #333;
+}
+
+/* Hover effect for dark mode button */
+.btn-outline-dark:hover {
+    background-color: #007bff; /* Blue background on hover */
+    color: white;
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Active state for dark mode button */
+.btn-outline-dark.active {
+    background-color: #333; /* Dark background when active */
+    color: white;
+}
+
+/* FontAwesome icons styling (moon and sun) */
+i.fas {
+    font-size: 24px;
+    margin-right: 10px; /* Space between icon and text */
+}
+
+/* Moon Icon Styling */
+.fas.fa-moon {
+    color: #fff; /* White color for the moon icon */
+}
+
+/* Sun Icon Styling */
+.fas.fa-sun {
+    color: #ffcc00; /* Yellow color for the sun icon */
+}
+
+/* Transition effect for icon color change */
+.fas {
+    transition: color 0.3s ease;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: white; /* White text color */
+}
+
+/* Dark Mode styles for the form and inputs */
+.dark-mode .form-group,
+.dark-mode textarea,
+.dark-mode button {
+    background-color: #333; /* Dark background for the form and inputs */
+    color: white; /* White text color for the form inputs */
+    border: 1px solid #555; /* Dark border */
+}
+
+/* Dark Mode button and input focus */
+.dark-mode textarea:focus,
+.dark-mode button:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Light Mode Styles (When not in dark mode) */
+body {
+    background-color: white; /* Light background for the body */
+    color: #333; /* Dark text color */
+}
+
+.form-group,
+textarea,
+button {
+    background-color: white; /* Light background for inputs and buttons */
+    color: #333; /* Dark text color for inputs and buttons */
+    border: 1px solid #ccc; /* Light border */
+}
+
+/* Light Mode button and input focus */
+textarea:focus,
+button:focus {
+    outline: none;
+    border-color: #007bff;
+}

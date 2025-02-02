@@ -1,0 +1,136 @@
+.text-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto; /* Ensure container grows with content */
+    transition: background-color 0.3s ease;
+    background-color: #fff;
+    color: #000;
+}
+
+.text-form-container.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.text-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%; /* Ensure it stretches the full width */
+    margin-bottom: 20px; /* Space below form */
+}
+
+.text-input {
+    width: 800px;
+    height: 150px;
+    font-size: 22px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    resize: vertical;
+    text-align: left;
+    overflow-y: auto;
+    line-height: 1.6;
+}
+
+.btn-primary {
+    padding: 10px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+.btn-primary:active {
+    background-color: #004085;
+    transform: scale(1.05);
+}
+
+/* Button container for buttons below the form */
+.button-container {
+    display: flex;
+    justify-content: center; /* Center buttons below the form */
+    gap: 10px; /* Space between buttons */
+    flex-wrap: wrap; /* Allows buttons to wrap in smaller screens */
+    margin-top: 20px; /* Add space above the buttons */
+}
+
+.btn {
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: transform 0.2s ease;
+}
+
+.btn-outline-dark {
+    background-color: #555;
+    color: white;
+    border: 1px solid #444;
+}
+
+.btn-outline-dark:hover {
+    background-color: #333;
+    transform: scale(1.1);
+}
+
+i.fas {
+    margin-right: 8px;
+    font-size: 18px; /* Ensure icon size matches button size */
+}
+
+/* Clear Button */
+.btn-outline-clear {
+    background-color: #1b032a;
+    color: rgb(183, 174, 174);
+    border: 2px solid #0e0202;
+    padding: 8px 24px;
+    font-size: 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Clear Button Hover Effect */
+.btn-outline-clear:hover {
+    background-color: #d32f2f;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Clear Button Active State */
+.btn-outline-clear:active {
+    background-color: #c2185b;
+    transform: scale(1.05);
+}
+
+/* Icon Styling */
+.btn-outline-clear i.fas {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+/* Focus effect for accessibility */
+.btn-outline-clear:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}

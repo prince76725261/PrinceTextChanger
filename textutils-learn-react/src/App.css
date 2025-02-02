@@ -1,0 +1,180 @@
+.navbar {
+  background-color: #343a40; /* Dark background color */
+  padding: 0.8rem 1.5rem; /* Padding for spacing */
+  position: relative; /* Makes the navbar the reference point for absolute elements */
+  display: flex;
+  justify-content: space-between; /* Space out the brand and links */
+  align-items: center; /* Vertically center the items */
+}
+
+.navbar-brand {
+  font-size: 1.8rem; /* Larger font size for the brand */
+  font-weight: 700; /* Bold font weight */
+  color: #0d0606; /* White color for brand text */
+}
+
+.navbar-brand:hover {
+  color: #190e68; /* Light color on hover */
+  text-decoration: none; /* No underline on hover */
+}
+
+.navbar-toggler-icon {
+  background-color: #fff; /* Change color of the hamburger icon */
+}
+
+.navbar-nav {
+  display: flex; /* Keep links in a single row */
+  align-items: center; /* Vertically center the nav items */
+  margin-left: 20px; /* Space between the nav items */
+}
+
+.navbar-nav .nav-item {
+  margin-left: 15px; /* Space between navigation items */
+}
+
+.navbar-nav .nav-link {
+  color: #f8f9fa; /* White text for nav links */
+  font-size: 1.1rem; /* Slightly larger text for readability */
+  text-transform: capitalize; /* Capitalize the link text */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #4800ff; /* Gold color on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
+.navbar-nav .nav-link.active {
+  color: #2b00ff; /* Gold color for active link */
+}
+
+.form-control {
+  border-radius: 20px; /* Rounded corners for input */
+  padding: 0.5rem 1rem; /* More padding inside input */
+}
+
+.btn-outline-success {
+  border-radius: 20px; /* Rounded corners for button */
+  border-color: #28a745; /* Green border */
+  color: #28a745; /* Green text */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-success:hover {
+  background-color: #28a745; /* Green background on hover */
+  color: #fff; /* White text on hover */
+}
+
+/* New CSS for shifting search bar to the top-right */
+.search-container {
+  position: absolute; /* Position it relative to the navbar */
+  top: 50%; /* Vertically center it */
+  right: 10px; /* Position it 10px from the right */
+  transform: translateY(-50%); /* Adjust vertical position to truly center */
+}
+
+@media (max-width: 991px) {
+  /* Adjust navbar items for smaller screens */
+  .navbar-nav {
+    text-align: center; /* Center nav items on small screens */
+    margin-left: 0; /* Remove left margin */
+    flex-wrap: wrap; /* Allow wrapping of nav items */
+  }
+  .navbar-nav .nav-item {
+    margin-left: 0; /* Remove left margin on small screens */
+    margin-bottom: 10px; /* Space between items */
+  }
+}
+
+/* Custom mobile-friendly adjustments */
+@media (max-width: 767px) {
+  .navbar {
+    padding: 0.6rem 1rem; /* Less padding on smaller screens */
+  }
+
+  .search-container {
+    position: relative; /* Revert to normal flow on mobile */
+    top: auto; /* Remove top positioning */
+    right: auto; /* Remove right positioning */
+    margin-top: 10px; /* Space from the navbar */
+  }
+}
+
+.collapse navbar-collapse {
+  margin-right: 25px;
+  padding-right: 25px;
+}
+
+/* App.css or a similar CSS file */
+.navbar-black {
+  background-color: #343a40; /* Dark mode navbar background */
+}
+
+.navbar-white {
+  background-color: #f8f9fa; /* Light mode navbar background */
+}
+
+.text-white {
+  color: white;
+}
+
+.text-black {
+  color: black;
+}
+/* Position the switch in the top-right corner */
+.form-check {
+  position: fixed; /* Keep it fixed in the top-right corner */
+  top: 10px;
+  right: 10px;
+  z-index: 9999; /* Ensure it stays on top of other elements */
+}
+
+/* Container to align switch and label in a row */
+.switch-container {
+  display: flex; /* Use Flexbox */
+  align-items: center; /* Vertically align items in the center */
+  gap: 8px; /* Space between the switch and the label */
+  color: #f8f9fa; /* Text color */
+}
+
+/* Style the toggle switch background */
+.toggle-switch {
+  width: 60px; /* Set width for the switch */
+  height: 30px; /* Set height for the switch */
+  background-color: #62799a; /* Default background color */
+  border-radius: 50px; /* Make it round */
+  position: relative; /* Needed for positioning the circle inside */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+  -webkit-appearance: none; /* Remove default appearance */
+  outline: none; /* Remove outline */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Create the circle inside the switch */
+.toggle-switch:before {
+  content: "";
+  position: absolute;
+  top: 2px; /* Space from the top of the switch */
+  left: 2px; /* Space from the left of the switch */
+  width: 26px; /* Circle width */
+  height: 26px; /* Circle height */
+  background-color: white; /* Circle color */
+  border-radius: 50%; /* Make the circle round */
+  transition: transform 0.3s ease; /* Smooth transition for circle movement */
+}
+
+/* When the switch is checked (light mode) */
+.toggle-switch:checked {
+  background-color: #4caf50; /* Green for light mode */
+}
+
+/* Move the circle to the right when the switch is checked */
+.toggle-switch:checked:before {
+  transform: translateX(30px); /* Move the circle to the right */
+}
+
+/* Adjust the text color for label depending on mode */
+.form-check-label {
+  font-size: 1rem; /* Font size for the label */
+  color: inherit; /* Inherit color from parent or mode */
+  cursor: pointer; /* Make label clickable */
+}
